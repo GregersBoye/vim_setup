@@ -6,3 +6,5 @@ set laststatus=2
 set updatetime=100
 call plug#end()
 set number
+set tabstop=4
+set shiftwidth=4
