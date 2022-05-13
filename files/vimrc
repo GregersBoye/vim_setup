@@ -8,9 +8,16 @@ set updatetime=100
 set tags=tags
 call plug#end()
 set number
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+
 set tabstop=4
 set shiftwidth=4
-
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 nmap <F8> :TagbarToggle<CR>
 "Setup to make explorer mimick nerdtree
 let g:netrw_banner = 0

@@ -1,0 +1,18 @@
+[user]
+	email = gregers.boye@gmail.com
+	name = Gregers Boye-Jacobsen
+[push]
+	default = matching
+[alias]
+       st = status
+       ci = commit
+       br = branch
+       co = checkout
+       df = diff
+       lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+       lga = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[push]
+       default = simple
+[core]
+       pager = less -S
+	editor = vim
