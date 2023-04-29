@@ -33,3 +33,18 @@ let g:tagbar_type_make = {
                 \ 't:targets'
             \ ]
 \}
+
+"Switch cursor when moving between insert and normal mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+"Fix delay when going back to normal-mode
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
+
+" reset the cursor on start (for older versions of vim, usually not required)
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
